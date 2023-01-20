@@ -1,0 +1,345 @@
+
+.navbar__main__container {
+  width: 100%;
+  height: fit-content;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  background: var(--white);
+  padding: relative;
+}
+.navbar__container {
+  background: var(--white);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.navbar__inner__container {
+  width: 94%;
+  max-width: var(--maxWidth);
+  height: 80px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: var(--white);
+}
+.menu__icon {
+  font-size: 35px;
+  display: none;
+  border-radius: 3px;
+  transition: all 0.1s;
+}
+.menu__icon:hover {
+  border: 2px solid red;
+}
+
+.navbar__logo__name {
+  color: var(--dark);
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.navbar__search__container {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+}
+.navbar__search__field {
+  height: 100%;
+  width: 560px;
+  padding: 6px 10px;
+  background: transparent;
+  border: none;
+  color: var(--dark);
+}
+.navbar__search__field:focus {
+  outline: none;
+}
+
+.navbar__search__button {
+  height: 100%;
+  width: 50px;
+  font-size: 23px;
+  background: transparent;
+  border: none;
+  color: var(--dark);
+  border-left: 1px solid var(--gray);
+  padding-top: 3px;
+  padding-left: 3px;
+  cursor: pointer;
+}
+.navbar__icons__container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__icon {
+  font-size: 26px;
+  color: var(--dark);
+  margin-bottom: -3px;
+  margin: 0 12px;
+  cursor: pointer;
+  position: relative;
+}
+.navbar__icon:last-child {
+  margin-right: 0;
+}
+.navbar__count {
+  position: absolute;
+  top: -3px;
+  left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--red);
+  height: 18px;
+  width: 18px;
+  color: var(--white);
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+/*--------------------------------------
+        Navigation Style Start
+---------------------------------------*/
+
+.menu__container {
+  width: 94%;
+  max-width: var(--maxWidth);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 20px 20px 0;
+}
+
+.menu__links__container {
+  display: flex;
+  list-style-type: none;
+  padding: 7px 0;
+}
+.menu__link {
+  color: var(--dark);
+  padding: 3px 15px;
+  letter-spacing: 1px;
+  position: relative;
+  transition: all 0.3s;
+  margin: 0 7px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.menu__link:first-of-type {
+  margin-left: 0;
+  padding-left: 0;
+}
+.menu__link::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: var(--red);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.4s;
+}
+
+.menu__link:hover {
+  transition: all 0.3s;
+  color: var(--red);
+}
+.menu__link:hover::after {
+  transition: all 0.4s;
+  width: 100%;
+}
+.menu__hotline__number {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  font-weight: 500;
+}
+.menu__hotline__number:hover {
+  color: var(--red);
+}
+.login__button,
+.logout__button {
+  display: none;
+}
+
+/*--------------------------------------
+        Media Query Style Start
+---------------------------------------*/
+
+@media only screen and (max-width: 1200px) and (min-width: 993px) {
+  .navbar__inner__container {
+    width: 100%;
+    max-width: 992px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  .navbar__search__container {
+    height: 37px;
+  }
+  .navbar__search__field {
+    width: 420px;
+  }
+
+  .menu__container {
+    width: 100%;
+    max-width: 992px;
+    padding: 20px 20px 0;
+  }
+  .menu__link {
+    padding: 3px 10px;
+    font-size: 15px;
+    margin: 0 7px;
+  }
+
+  .menu__hotline__number {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .menu__icon {
+    display: block;
+  }
+  .menu__cross__icon {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 5;
+    border: 1px solid red;
+    padding: 3px;
+  }
+  .menu__cross__icon:hover {
+    border: 2px solid red;
+    transition: all 0.3s;
+    font-size: 36px;
+  }
+  .navbar__search__container {
+    width: 70%;
+    height: 35px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .navbar__search__field {
+    width: 100%;
+  }
+  .menu__container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(000, 000, 000, 0.5);
+    position: absolute;
+    top: 0;
+    transition-delay: 0.2s;
+    left: -101%;
+    z-index: 5;
+  }
+  .menu__links__container {
+    display: block;
+    height: 100vh;
+    width: fit-content;
+    background: rgb(255, 255, 255);
+    padding: 60px 0 0;
+    position: absolute;
+    left: -101%;
+    top: 0;
+    overflow: hidden;
+    transition: all 1s;
+    margin: 0;
+  }
+  .open__menu__container {
+    left: 0;
+    transition-delay: 0s;
+  }
+  .open__menu__links__container {
+    left: 0;
+    transition: all 0.5s;
+  }
+  .menu__link {
+    padding: 20px;
+    font-size: 15px;
+    display: block;
+    width: 250px;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    margin: 0;
+  }
+  .menu__link:first-of-type {
+    padding: 20px;
+  }
+  .menu__hotline__number {
+    font-size: 15px;
+  }
+  .login__button,
+  .logout__button {
+    display: flex;
+    align-items: center;
+  }
+  .menu__hotline__number {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar__inner__container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .hambarger__icon {
+    font-size: 30px;
+  }
+  .navbar__icon:first-child {
+    display: none;
+  }
+  .navbar__logo__name {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .navbar__icon {
+    font-size: 25px;
+    margin: 0 10px;
+  }
+
+  .navbar__count {
+    height: 16px;
+    width: 16px;
+    border-radius: 19px;
+    font-size: 10px;
+  }
+  .navbar__search__container {
+    top: 90px;
+    width: 92%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .navbar__inner__container {
+    padding: 28px 14px 0;
+  }
+  .navbar__search__container {
+    top: 94px;
+  }
+  .hambarger__icon {
+    font-size: 29px;
+  }
+  .navbar__logo__name {
+    font-size: 26px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .navbar__icon {
+    font-size: 24px;
+    margin: 0 9px;
+  }
+}

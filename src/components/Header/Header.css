@@ -1,0 +1,116 @@
+.slider_container {
+  width: 98%;
+  margin: 20px auto 0;
+  position: relative;
+}
+
+.slider__image {
+  width: 100%;
+  max-height: 590px;
+  object-fit: cover;
+}
+
+.slider__text__container {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%);
+  color: var(--white);
+  text-align: center;
+}
+.slider__text__container > h1 {
+  color: var(--white);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 79px;
+}
+.slider__text__container > p {
+  color: var(--white);
+  font-size: 22px;
+  line-height: 28px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .slider__image {
+    width: 100%;
+    min-height: 328px;
+    max-height: 590px;
+    object-fit: cover;
+  }
+  .slider__text__container > h1 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 60px;
+  }
+  .slider__text__container > p {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .slider_container {
+    width: 96%;
+    margin: 70px auto 0;
+  }
+  .slider__image {
+    width: 100%;
+    min-height: 120px;
+    max-height: 590px;
+    object-fit: cover;
+  }
+  .slider__text__container {
+    top: 35%;
+    left: 50%;
+  }
+  .slider__text__container > h1 {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+  }
+  .slider__text__container > p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+  }
+}
+@media only screen and (max-width: 678px) {
+  .slider__text__container {
+    top: 35%;
+    left: 50%;
+  }
+  .slider__text__container > h1 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+  .slider__text__container > p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .slider_container {
+    width: 95%;
+  }
+  .slider__text__container {
+    top: 31%;
+    left: 50%;
+  }
+  .slider__text__container > h1 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+  }
+  .slider__text__container > p {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 15px;
+  }
+  .slider__image {
+    width: 100%;
+    min-height: 140px;
+    max-height: 590px;
+    object-fit: cover;
+  }
+}
