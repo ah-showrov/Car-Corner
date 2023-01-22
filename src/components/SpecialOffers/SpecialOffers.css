@@ -1,34 +1,79 @@
-.offers__main__container{
-    width: 100%;
-    padding-top: 50px;
+.offers__main__container {
+  width: 100%;
+  padding-top: 50px;
 }
-.offers__title{
-    font-size: 30px;
-    line-height: 70px;
-    width: 97%;
-    max-width: var(--maxWidth);
-    margin: 0 auto;
-    border-bottom: 1px solid var(--gray);
-    color: var(--red);
-    padding: 0 20px;
+.offers__title {
+  font-size: 30px;
+  line-height: 70px;
+  width: 97%;
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  border-bottom: 0.5px solid var(--gray);
+  color: var(--red);
+  padding: 0 20px;
 }
-.offers__inner__container{
-    width: 97%;
-    max-width: var(--maxWidth);
-    margin: 100px auto;
-    display: flex;
-    justify-content: center;
-    row-gap: 45px;
-    column-gap: 30px;
-    /* background: yellow; */
-    /* padding: 0 35px; */
-    flex-wrap: wrap;
+.offers__inner__container {
+  width: 97%;
+  max-width: var(--maxWidth);
+  margin: 0 auto 100px;
+  display: flex;
+  justify-content: center;
+  row-gap: 45px;
+  column-gap: 30px;
+  padding: 50px 30px 30px;
+  flex-wrap: wrap;
+}
+.offer__swiper {
+  min-height: 320px;
 }
 
-.offer__item__card{
-    width: 230px;
-    min-height: 330px;
-    background: white;
-    box-shadow: 0px 2px 7px rgb(227, 227, 227);
-    text-align: center;
+.offer__item__card {
+  width: 230px;
+  background: rgb(255, 255, 255);
+  text-align: center;
+  position: relative;
+  border: 1px solid rgba(233, 233, 233, 0.658);
+  border-radius: 5px;
+}
+.offer__item__card__image {
+  width: 94.72%;
+  max-width: 200px;
+}
+.offer__item__card__title {
+  word-wrap: break-word;
+  text-align: left;
+  padding: 10px 8px;
+  font-size: 14px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+.offer__card__item__bottom__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  padding: 0 8px;
+}
+.offer__item__card__price {
+  color: black;
+  text-align: left;
+  line-height: 30px;
+  font-weight: 500;
+
+  letter-spacing: 1px;
+}
+.offer__item__cart__icon {
+  color: red;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.offer__item__heart__icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: red;
 }

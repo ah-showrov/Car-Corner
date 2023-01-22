@@ -1,6 +1,7 @@
 import React from "react";
 import "./SpecialOffers.css";
 import { specialOffersItems } from "../../data";
+import { BsBasketFill, BsHeart } from "react-icons/bs";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -13,38 +14,56 @@ const SpecialOffers = () => {
       <div className="offers__inner__container">
         <>
           <Swiper
+            style={{ width: "100%" }}
             slidesPerView={1}
             spaceBetween={10}
-            pagination={{
-              clickable: true,
-            }}
+            pagination={false}
             breakpoints={{
-              "@0.00": {
-                slidesPerView: 1,
+              300: {
+                slidesPerView: 2,
                 spaceBetween: 10,
               },
-              "@0.75": {
-                slidesPerView: 2,
+              640: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 3,
                 spaceBetween: 20,
               },
-              "@1.00": {
-                slidesPerView: 3,
-                spaceBetween: 40,
+              1200: {
+                slidesPerView: 4,
+                spaceBetween: 50,
               },
-              "@1.50": {
+              1300: {
                 slidesPerView: 5,
                 spaceBetween: 50,
               },
             }}
             modules={[Pagination]}
-            className="mySwiper"
+            className="mySwiper offer__swiper"
           >
             {specialOffersItems.map((item) => (
               <SwiperSlide key={item.id} className="offer__item__card">
-                {" "}
-                <img width="100%" src={item.image} alt="" />
-                <p>{item.title.slice(0, 23)}</p>
-                <p>${item.price}</p>{" "}
+                <span className="offer__item__heart__icon">
+                  <BsHeart />
+                </span>
+                <img
+                  className="offer__item__card__image"
+                  src={item.image}
+                  alt="offer item image"
+                />
+                <p className="offer__item__card__title">
+                  {item.title.slice(0, 23)}
+                </p>
+                <div className="offer__card__item__bottom__box">
+                  <span className="offer__item__card__price">
+                    ${item.price}
+                  </span>
+                  <span className="offer__item__cart__icon">
+                    <BsBasketFill />
+                  </span>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
